@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaDownload } from 'react-icons/fa';
 import Navbar from './components/Navbar';
 import ParticleBackground from './components/ParticleBackground';
 import SkillCard from './components/SkillCard';
-import dp from '../public/dp1.png'
+import dp from '/dp1.png'
 
 function App() {
   const titleWords = {
@@ -84,6 +84,14 @@ function App() {
                 <FaPhone className="text-2xl hover:text-gray-300" />
               </a>
             </div>
+            <motion.button
+                variants={wordVariants}
+                className="cv-button"
+                onClick={() => window.open('resume.pdf', '_blank')}
+              >
+                <FaDownload className="inline-block mr-2" />
+                Download CV
+              </motion.button>
           </motion.div>
           
           <motion.div

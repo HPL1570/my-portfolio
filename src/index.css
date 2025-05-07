@@ -59,3 +59,22 @@ body {
 .skill-icon {
   @apply w-8 h-8 object-contain;
 }
+
+.cv-button {
+  @apply relative inline-block px-8 py-3 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300;
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.cv-button::before {
+  content: '';
+  @apply absolute top-0 left-0 w-0 h-full bg-blue-600 transition-all duration-300 -z-10;
+}
+
+.cv-button:hover::before {
+  @apply w-full;
+}
+
+.cv-button:hover {
+  @apply border-blue-600;
+}
